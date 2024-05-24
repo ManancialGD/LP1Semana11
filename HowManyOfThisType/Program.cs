@@ -30,5 +30,7 @@ class Program
         Console.WriteLine($"Number of strings: {numberOfStrings}");
         Console.WriteLine($"Number of doubles: {numberOfDoubles}");
         Console.WriteLine($"Number of chars: {numberOfChars}");
+
+        Console.WriteLine("“Merci d’utiliser ce programme!");
     }
 }
