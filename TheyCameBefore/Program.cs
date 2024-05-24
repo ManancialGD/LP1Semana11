@@ -1,40 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
 
 class Program
 {
     static void Main(string[] args)
     {
-        // Create a collection of integers
-        List<int> intItems = new List<int> { 1, 3, 5, 7, 9, 11 };
+        // Testing Guarda3 with string type
+        Guarda3<string> guardaStrings = new Guarda3<string>();
+        guardaStrings.SetItem(0, "First");
+        guardaStrings.SetItem(1, "Second");
+        guardaStrings.SetItem(2, "Third");
 
-        // Specify an item to compare against
-        int compareInt = 6;
-
-        // Get the items that are before the specified item
-        IEnumerable<int> intResult = BeforeUtils.GetTheOnesBefore(intItems, compareInt);
-
-        // Print the results
-        Console.WriteLine("Integers before 6:");
-        foreach (int i in intResult)
+        Console.WriteLine("Strings in Guarda3:");
+        for (int i = 0; i < 3; i++)
         {
-            Console.WriteLine(i);
+            Console.WriteLine($"Item {i + 1}: {guardaStrings.GetItem(i)}");
         }
 
-        // Create a collection of doubles
-        List<double> doubleItems = new List<double> { 1.1, 3.3, 5.5, 7.7, 9.9, 11.1 };
+        // Testing Guarda3 with float type
+        Guarda3<float> guardaFloats = new Guarda3<float>();
+        guardaFloats.SetItem(0, 1.1f);
+        guardaFloats.SetItem(1, 2.2f);
+        guardaFloats.SetItem(2, 3.3f);
 
-        // Specify an item to compare against
-        double compareDouble = 6.6;
-
-        // Get the items that are before the specified item
-        IEnumerable<double> doubleResult = BeforeUtils.GetTheOnesBefore(doubleItems, compareDouble);
-
-        // Print the results
-        Console.WriteLine("Doubles before 6.6:");
-        foreach (double d in doubleResult)
+        Console.WriteLine("\nFloats in Guarda3:");
+        for (int i = 0; i < 3; i++)
         {
-            Console.WriteLine(d);
+            Console.WriteLine($"Item {i + 1}: {guardaFloats.GetItem(i)}");
         }
     }
 }
